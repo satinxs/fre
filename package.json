@@ -2,36 +2,12 @@
   "name": "fre",
   "version": "2.6.2",
   "type": "module",
-  "main": "dist/fre.js",
-  "unpkg": "dist/fre.umd.js",
-  "module": "dist/fre.js",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
   "exports": {
     ".": {
-      "import": "./dist/fre.js",
-      "require": "./dist/fre.umd.js"
-    },
-    "./jsx-runtime": {
-      "import": "./jsx-runtime.js",
-      "require": "./jsx-runtime.js"
+      "import": "./src/index.ts"
     }
-  },
-  "typings": "./dist/types/index.d.ts",
-  "files": [
-    "src/**/*",
-    "dist/*.js",
-    "dist/*.map",
-    "dist/types",
-    "jsx-runtime.js",
-    "jsx-runtime.d.ts",
-    "jsx-dev-runtime.js",
-    "jsx-dev-runtime.d.ts"
-  ],
-  "scripts": {
-    "test": "cross-env pw-test test/*.spec.tsx --runner zora --extensions tsx --cov",
-    "report": "npx nyc report",
-    "build": "rollup -c",
-    "dev": "cd demo && yarn dev",
-    "prepublishOnly": "yarn build"
   },
   "description": "Tiny Concurrent UI library with Fiber.",
   "keywords": [
@@ -46,24 +22,6 @@
   ],
   "author": "132yse",
   "license": "MIT",
-  "devDependencies": {
-    "@skypack/package-check": "^0.2.2",
-    "codecov": "^3.8.2",
-    "cross-env": "^5.2.0",
-    "nyc": "^15.1.0",
-    "rollup": "^2.11.2",
-    "rollup-plugin-size": "^0.2.2",
-    "rollup-plugin-terser": "^5.1.2",
-    "rollup-plugin-typescript2": "^0.27.0",
-    "terser": "^4.1.2",
-    "typescript": "^4.0.2",
-    "vite": "^2.7.13",
-    "yarpm": "^0.2.1",
-    "zora": "4.0.2"
-  },
   "repository": "yisar/fre",
-  "homepage": "https://fre.js.org",
-  "dependencies": {
-    "playwright-test": "7.2.2"
-  }
+  "homepage": "https://fre.js.org"
 }
